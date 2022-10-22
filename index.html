@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        li {
+        li,
+        ul {
             color: tomato;
+        }
+
+        #fruits-title {
+            color: blue;
         }
     </style>
 </head>
@@ -18,16 +23,35 @@
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis nemo dolorum nulla consequuntur
+            eligendi veritatis minima! Maxime quos quasi deleniti.</p>
     </header>
 
     <main>
-        <h1>Document Object Memory</h1>
+        <section>
+            <h1>Document Object Memory</h1>
 
-        <ul>
-            <li>Jalali Set</li>
-            <li>Sfayet</li>
-            <li>Bonobash</li>
-        </ul>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Sfayet</li>
+                <li>Bonobash</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="fruits-title">Fruits I Like</h1>
+
+            <ul>Apple</ul>
+            <ul>Banana</ul>
+            <ul>Carrot</ul>
+        </section>
+
+        <section>
+            <h1>Place I like</h1>
+            <ul class="imp-places">Sundorban</ul>
+            <ul class="imp-places">Bandorban</ul>
+            <ul>Katabon</ul>
+        </section>
     </main>
     <script src="dom.js"></script>
     <script>
@@ -39,7 +63,7 @@
                 console.log(time, 'study korece');
             }
         }
-
+        // ........................................................................ 
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
 
@@ -47,6 +71,11 @@
             // console.log(li);
             console.log(li.innerText);
         }
+
+        // .................................................................. 
+
+        const allClasses = document.getElementsByClassName('imp-places');
+        console.log(allClasses);  
     </script>
 </body>
 
