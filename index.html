@@ -31,7 +31,22 @@
     </main>
     <script src="dom.js"></script>
     <script>
-        console.log('inside the html file')
+        console.log('inside the html file');
+        const student = {
+            name: 'Mohammad',
+            ID: 11,
+            study: function (time) {
+                console.log(time, 'study korece');
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+
+        for (const li of liCollection) {
+            // console.log(li);
+            console.log(li.innerText);
+        }
     </script>
 </body>
 
